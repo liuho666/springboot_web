@@ -1,12 +1,14 @@
 package com.liu.dao;
 
 import com.liu.pojo.Department;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 //部门dao
+@Repository
 public class DepartmentDao {
     //模拟数据库中的数据
     private static Map<Integer, Department> departments = null;
@@ -28,5 +30,7 @@ public class DepartmentDao {
     public Department getDepartmentById(Integer id){
         return departments.get(id);
     }
+
+
 
 }

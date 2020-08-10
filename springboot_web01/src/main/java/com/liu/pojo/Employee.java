@@ -9,7 +9,6 @@ import java.util.Date;
 //员工表
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Employee {
     private Integer id;
     private String lastName;
@@ -17,4 +16,14 @@ public class Employee {
     private Integer gender;//0:女 1：男
     private Department department;
     private Date birth;
+
+    public Employee(Integer id, String lastName, String email, Integer gender, Department department) {
+        this.id = id;
+        this.lastName = lastName;
+        this.email = email;
+        this.gender = gender;
+        this.department = department;
+        //默认的创建连接
+        this.birth = new Date();
+    }
 }
